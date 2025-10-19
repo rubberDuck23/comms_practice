@@ -30,6 +30,9 @@ Can run on different VMs by changing the address on python file from 127.0.0.1 t
 # Start a docker container with bash terminal
 * docker run -it my_cool_image bash
 
+# Create a docker container which runs a particular command and then stops (example)
+* docker run mega_image python3 /src/echo_client.py --ip 172.17.0.1
+
 # View running containers
 * docker ps
 
