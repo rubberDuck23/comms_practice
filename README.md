@@ -19,21 +19,21 @@ Can run on different VMs by changing the address on python file from 127.0.0.1 t
 * docker pull nginx  
 * docker pull ubuntu 
 
-# Make your own docker image!!! 
-* Create Dockerfile like we have in docker_stuff
+## Make your own docker image!!! 
+* Create Dockerfile like we have in the docker_stuff directory
 * cd to docker_stuff
 * docker build -t my_cool_image .    (Maybe instead of just give path to dockder file?)
 
-# Get rid of an image 
+## Get rid of an image 
 * docker rmi -f my_cool_image
 
-# Start a docker container with bash terminal
+## Start a docker container with bash terminal
 * docker run -it my_cool_image bash
 
-# Create a docker container which runs a particular command and then stops (example)
+## Create a docker container which runs a particular command and then stops (example)
 * docker run mega_image python3 /src/echo_client.py --ip 172.17.0.1
 
-# View running containers
+## View running containers
 * docker ps
 
 
@@ -45,3 +45,9 @@ Can run on different VMs by changing the address on python file from 127.0.0.1 t
 ## Copy a file to an activelyh running container
 * docker cp <src_path> <container>:<dest_path>
 
+# TLS example
+* Generate scripts with create_certs.py
+* tshark seems to need to use lo interface. Not sure what happens when we dockerize this
+** tshark -i lo  -f "tcp port 8443" -w super3.out
+* run tls_server.py in one terminal
+* run tls_client.py in another terminal (they will both use the certes generated earlier)
