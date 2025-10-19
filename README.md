@@ -15,27 +15,30 @@ Can run on different VMs by changing the address on python file from 127.0.0.1 t
 
 # Let's try this with DOCKER!!!
 ## Install docker and pull nginx
-sudo apt install docker.io
-docker pull nginx  
-docker pull ubuntu 
+* sudo apt install docker.io
+* docker pull nginx  
+* docker pull ubuntu 
 
 # Make your own docker image!!! 
-Create Dockerfile like we have in docker_stuff
-cd to docker_stuff
-docker build -t my_cool_image .    (Maybe instead of just give path to dockder file?)
+* Create Dockerfile like we have in docker_stuff
+* cd to docker_stuff
+* docker build -t my_cool_image .    (Maybe instead of just give path to dockder file?)
+
+# Get rid of an image 
+* docker rmi -f my_cool_image
 
 # Start a docker container with bash terminal
-docker run -it my_cool_image bash
+* docker run -it my_cool_image bash
 
 # View running containers
-docker ps
+* docker ps
 
 
 ## Kill a docker container
-docker kill <container_id_or_name>  
-You apprantely have to remove it too with: docker rm <container_id_or_name>
+* docker kill <container_id_or_name>  
+* You apprantely have to remove it too with: docker rm <container_id_or_name>
 
 
 ## Copy a file to an activelyh running container
-docker cp <src_path> <container>:<dest_path>
+* docker cp <src_path> <container>:<dest_path>
 
