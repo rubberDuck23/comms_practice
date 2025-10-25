@@ -1,2 +1,5 @@
 tls_socket/test_ubuntu_new.crt
 tls_socket/test_ubuntu_new.key
+
+docker_tls/test_ubuntu_new.crt
+docker_tls/test_ubuntu_new.key
