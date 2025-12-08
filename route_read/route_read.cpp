@@ -7,7 +7,7 @@
 #include <linux/rtnetlink.h>
 #include <arpa/inet.h>
 
-int NLMSG_GOODSIZE = 30000;
+int NLMSG_GOODSIZE = 30000; // I added this, should figure out how to get the actual value
 
 // Helper to convert an IPv4 address from network bytes to a string
 void print_ip(unsigned int ip, char *buf) {

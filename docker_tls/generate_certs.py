@@ -9,8 +9,11 @@ import ipaddress
 import netifaces
 
 
+DEFAULT_CERT_FILE = 'test_ubuntu_new.crt'
+DEFAULT_KEY_FILE = 'test_ubuntu_new.key'
 
-def generate_certs(server_ip):
+
+def generate_certs(server_ip, cert_file = DEFAULT_CERT_FILE, key_file = DEFAULT_KEY_FILE):
 
 
 
@@ -52,8 +55,8 @@ def generate_certs(server_ip):
         encryption_algorithm=serialization.NoEncryption(),
     )
 
-    with open('test_ubuntu_new.crt', 'wb') as c:
+    with open(cert_file, 'wb') as c:
         c.write(my_cert_pem)
 
-    with open('test_ubuntu_new.key', 'wb') as k:
+    with open(key_file, 'wb') as k:
         k.write(my_key_pem)
